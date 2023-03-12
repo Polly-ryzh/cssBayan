@@ -12,6 +12,74 @@ body {
     width: 1920px;
 }
 
-.title {
-    text-transform: uppercase;
+.flex {
+    display: flex;
 }
+
+.title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 5rem;
+}
+
+.accordion {
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.accordion-title {
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .5rem solid #5567;
+    cursor: pointer;
+}
+
+.accordion-title:hover {
+    color: rgb(55, 18, 124);
+}
+
+.accordion-text {
+    padding: 2rem;
+    margin-bottom: 5rem;
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 7rem;
+    transition: .3s ease-in-out;
+}
+
+.accordion-icon {
+    background-image: url('img/plus.svg');
+    width: 5rem;
+    height: 5rem;
+}
+
+.accordion-title:hover + .accordion-icon{
+    background-image: url('img/minus.svg');
+}
+
+.accordion-input {
+    display: none;
+}
+
+.accordion-content {
+    display: none;
+    justify-content: center;
+    margin: 3rem;
+    flex-basis: 80rem;
+    transition: .3s ease-in-out;
+}
+
+.accordion-input:checked + .accordion-content {
+    display: flex;
+}
+
+.accordion-input:hover + .accordion-content {
+    display: flex;
+}
+
+.picture {
+    max-width: 100%;
+    transition: .3s ease-in-out;
+}
+
