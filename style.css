@@ -67,13 +67,7 @@ img {
     transition: .8s ease-in-out;
 }
 
-.accordion-icon {
-    background-image: url('img/plus.svg');
-    background-repeat: no-repeat;
-    width: 15em;
-    height: 15em;
-    transition: .3s ease-in-out;
-}
+
 
 /* .accordion-input input:hover ~ .accordion-icon{
     background-image: url('img/minus.svg');
@@ -101,6 +95,22 @@ img {
     transform: scale(1);
     opacity: 1;
 
+}
+
+.accordion-input:checked ~ .accordion-icon {
+    background-image: url('img/minus.svg');
+}
+
+.accordion-input:hover ~ .accordion-icon {
+    background-image: url('img/minus.svg');
+}
+
+.accordion-icon {
+    background-image: url('img/plus.svg');
+    background-repeat: no-repeat;
+    width: 15em;
+    height: 15em;
+    transition: .3s ease-in-out;
 }
 
 .picture {
