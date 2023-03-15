@@ -56,7 +56,11 @@ img {
     transition: .3s ease-in-out;
 }
 
-.accordion-title:hover  {
+.accordion-title:hover {
+    color: rgb(55, 18, 124);
+}
+
+.accordion-title:checked {
     color: rgb(55, 18, 124);
 }
 
@@ -80,8 +84,14 @@ img {
     max-width: 20em;
     transform: scale(0);
     opacity: 0;
+    cursor: pointer;
     transition: .8s ease-in-out;
 }
+
+.accordion-content:hover {
+    scale: 1.05;
+}
+
 
 .accordion-input:checked ~ .accordion-content {
     display: flex;
@@ -204,6 +214,10 @@ img {
         border-bottom: .4em solid #5567;
         font-size: .08em;
     }
+
+    .accordion-title:hover {
+        color: none;
+    }
     
     .accordion-text {
         font-size: 5em;
@@ -217,4 +231,9 @@ img {
     .accordion-content {
         max-width: 10em;
     }
+
+    .accordion-content:hover {
+        scale: none;
+    }
+    
 }
